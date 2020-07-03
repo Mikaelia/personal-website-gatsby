@@ -4,19 +4,72 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Background from "../components/Background"
+import Wave from "../components/Wave"
+import Tree from "../components/Tree"
+import Introduction from "../components/Introduction"
+import Birds from "../components/Birds"
+import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+class IndexPage extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <SEO title="Home" />
+        <Parallax pages={1.5}>
+          <ParallaxLayer factor={1} offset={0} speed={0}>
+            <div
+              style={{
+                minWidth: "1500px",
+                height: "100%",
+                overflow: "hidden",
+              }}
+            >
+              <Background></Background>
+              <Birds></Birds>
+            </div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={1} style={{ top: "-50rem" }} speed={1}>
+            <div className="second-page">
+              <div className="tree-container" style={{ position: "relative" }}>
+                <Tree
+                  style={{
+                    position: "absolute",
+                    height: "6rem",
+                    width: "10.5rem",
+                    bottom: "83px",
+                    left: "-10",
+                  }}
+                ></Tree>
+                <Tree
+                  style={{
+                    position: "absolute",
+                    height: "12rem",
+                    width: "18rem",
+                    bottom: "76px",
+                    left: "18px",
+                    transform: "rotate(2deg)",
+                  }}
+                ></Tree>
+                <Tree
+                  style={{
+                    position: "absolute",
+                    height: "9.5rem",
+                    width: "23rem",
+                    bottom: "68px",
+                    left: "90px",
+                    transform: "rotate(4deg)",
+                  }}
+                ></Tree>
+              </div>
+              <Wave></Wave>
+              <Introduction></Introduction>
+            </div>
+          </ParallaxLayer>
+        </Parallax>
+      </Layout>
+    )
+  }
+}
 
 export default IndexPage

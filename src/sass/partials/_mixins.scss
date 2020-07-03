@@ -1,0 +1,20 @@
+// From 500px - 780px
+@mixin respond($breakpoint) {
+    @if $breakpoint==smallest {
+        @media only screen and (min-width: 31.25em) {
+            @content
+        }
+    }
+
+    @if $breakpoint==large {
+        @media only screen and (min-width: 50em) {
+            @content
+        }
+    }
+
+    @if $breakpoint==largest {
+        @media only screen and (min-width: 69.25em) {
+            @content
+        }
+    }
+}

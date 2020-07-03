@@ -1,0 +1,14 @@
+.story {
+    &__content {
+        background-color: $color-black;
+        z-index: 30;
+        position: relative;
+        height: 35rem;
+
+        // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        //     -webkit-clip-path: polygon(0 0, 100% 0, 100% 50rem, 0 100%);
+        //     clip-path: polygon(0 0, 100% 0, 100% 35rem, 0 100%);
+        //     height: 45rem;
+        // }
+    }
+}

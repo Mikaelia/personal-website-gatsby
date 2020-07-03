@@ -1,0 +1,231 @@
+.project {
+  &__container {
+    height: 80rem;
+    width: 95vw;
+    margin-top: 0rem;
+    padding-top: 5rem;
+    border-radius: 0.2rem;
+
+    background: rgba(255, 255, 255, 0.152);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0 100%);
+    }
+
+    @include respond(large) {
+      height: 73rem;
+    }
+  }
+
+  &__header {
+    height: 10%;
+    width: 100%;
+    margin: 10rem 0 1rem 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__card-container {
+    height: 75%;
+    width: 94%;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+    padding-top: 3rem;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 4rem 2rem;
+    align-items: center;
+    justify-items: center;
+
+    @include respond(smallest) {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+
+    @include respond(large) {
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    }
+
+    @include respond(largest) {
+      overflow: hidden;
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 19rem;
+    height: 19rem;
+    margin-bottom: 0;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: $box-shadow;
+    transition: all 0.2s ease-out;
+
+    @include respond(smallest) {
+      width: 25rem;
+      height: 25rem;
+
+      &:hover {
+        transform: scale(1.01) translateY(-1rem);
+        box-shadow: $box-shadow-dark;
+      }
+    }
+
+    @include respond(large) {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    @include respond(largest) {
+      width: 19rem;
+      height: 19rem;
+    }
+
+    &:hover .project__card-overlay {
+      opacity: 1;
+      background-position: 0%;
+    }
+
+    &:hover .project__card-details {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:hover .project__card-link {
+      opacity: 1;
+      height: 15%;
+      width: 100%;
+      font-weight: 400;
+      background: $color-secondary-light;
+      z-index: 10;
+    }
+  }
+
+  &__card-details {
+    opacity: 0;
+    visibility: hidden;
+    height: 50%;
+    width: 80%;
+    margin-top: 4rem;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: none;
+    line-height: 1rem;
+    color: #ffffff;
+    transition: opacity 0.4s ease-in;
+    transition-delay: 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 3;
+  }
+
+  &__card-tools {
+    text-transform: uppercase;
+    color: rgb(163, 208, 238);
+    font-weight: 500;
+  }
+
+  &__card-name {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: rgb(163, 208, 238);
+  }
+
+  &__card-summary {
+    margin-bottom: 2rem;
+  }
+
+  &__card-overlay {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.4s ease-in;
+
+    background-size: 400%;
+    background-position: 100%;
+    background-image: linear-gradient(150deg, #262c36 50%, transparent 50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 2;
+  }
+
+  &__card-link:link,
+  &__card-link:visited {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+    transition-delay: 1s;
+
+    &:hover {
+      background: rgb(163, 208, 238);
+    }
+  }
+
+  &__card-image {
+    width: 100%;
+    height: 101%;
+    position: relative;
+    background: center;
+    background-position-y: -0.1rem;
+    background-size: cover;
+    transition: height 0.2s;
+    z-index: 0;
+  }
+}
+
+.card-image {
+  &--1 {
+    background-image: url("../static/TrailFinder1.svg");
+  }
+
+  &--2 {
+    background-image: url("../static/colorverse.svg");
+  }
+
+  &--3 {
+    background-image: url("../static/shell.svg");
+  }
+
+  &--4 {
+    background-image: url("../static/airbnb.svg");
+    height: 105%;
+  }
+
+  &--5 {
+    background-image: url("../static/trailfinder2.svg");
+  }
+
+  &--6 {
+    background-image: url("../static/HN.svg");
+  }
+}
