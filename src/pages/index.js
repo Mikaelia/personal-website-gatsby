@@ -16,8 +16,8 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home" />
-        <Parallax pages={1.5}>
-          <ParallaxLayer factor={1} offset={0} speed={0}>
+        <Parallax pages={2}>
+          <ParallaxLayer factor={1.23} offset={0} speed={-0.1}>
             <div
               style={{
                 minWidth: "1500px",
@@ -29,7 +29,7 @@ class IndexPage extends React.Component {
               <Birds></Birds>
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} style={{ top: "-50rem" }} speed={1}>
+          <ParallaxLayer factor={1} offset={1} speed={0.3}>
             <div className="second-page">
               <div className="tree-container" style={{ position: "relative" }}>
                 <Tree
@@ -62,7 +62,7 @@ class IndexPage extends React.Component {
                   }}
                 ></Tree>
               </div>
-              <Wave></Wave>
+
               <Introduction></Introduction>
             </div>
           </ParallaxLayer>
