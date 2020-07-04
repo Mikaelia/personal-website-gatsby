@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
@@ -14,6 +12,7 @@ const SecondPage = () => (
     <SEO title="Page two" />
     <IframeWrapper>
       <iframe
+        title="resume-pdf"
         src="https://drive.google.com/file/d/1ZOhjbwYR7HnliDCpihB7JYd2urQ9PLmc/preview"
         width="100%"
         height="100%"
