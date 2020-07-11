@@ -7,9 +7,9 @@ const Navigation = ({ modifier }) => {
   //   document.addEventListener("keydown", this.closeModal);
   // }
 
-  const closeModal = event => {
-    if (event.keyCode === 27) setChecked(false)
-  }
+  // const closeModal = event => {
+  //   if (event.keyCode === 27) setChecked(false)
+  // }
 
   const handleCheck = () => {
     setChecked(!checked)

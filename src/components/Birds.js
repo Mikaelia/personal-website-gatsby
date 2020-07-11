@@ -85,7 +85,7 @@ const BirdsContainer = styled.div`
   }
 
   .bird-container {
-    position: absolute;
+    position: fixed;
     top: 33%;
     transform: scale(0) translateX(-10vw);
     will-change: transform;
