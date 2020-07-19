@@ -7,13 +7,13 @@ const IframeWrapper = styled.div`
   height: calc(100vh - 4rem);
 `
 
-const SecondPage = () => (
+const ResumePage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Resume" />
     <IframeWrapper>
       <iframe
         title="resume-pdf"
-        src="https://drive.google.com/file/d/1ZOhjbwYR7HnliDCpihB7JYd2urQ9PLmc/preview"
+        src="https://drive.google.com/file/d/1K_kaLTaJGICNMCv28PfrN82xLtRN4H4a/preview"
         width="100%"
         height="100%"
         style={{ marginTop: "4rem" }}
@@ -22,4 +22,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default ResumePage
