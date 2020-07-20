@@ -41,7 +41,7 @@ export default function Introduction() {
                         As an{" "}
                         <a
                           className="art-link"
-                          href="https://www.facebook.com/mikaelaspencils/spanhotos/a.1153897121335193/1153897111335194/?type=1&theater"
+                          href="https://www.facebook.com/mikaelaspencils/"
                         >
                           artist
                         </a>

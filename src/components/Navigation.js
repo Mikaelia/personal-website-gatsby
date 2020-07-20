@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 const Navigation = ({ modifier }) => {
   const [checked, setChecked] = useState(false)
