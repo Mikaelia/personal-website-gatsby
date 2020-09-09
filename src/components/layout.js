@@ -10,12 +10,11 @@ import PropTypes from "prop-types"
 import Header from "./header.js"
 import "./layout.css"
 import "../sass/main.scss"
-
 const Layout = ({ children }) => {
   return (
     <>
-      <Header />
       <div>
+        <Header />
         <main style={{ height: "100vh" }}>{children}</main>
       </div>
     </>

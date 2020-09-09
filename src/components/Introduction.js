@@ -8,6 +8,7 @@ import {
 } from "../components/socialMediaIcons"
 import { Spring } from "react-spring/renderprops"
 import VisibilitySensor from "react-visibility-sensor"
+import Header from "./header.js"
 
 export default function Introduction() {
   return (
@@ -23,11 +24,23 @@ export default function Introduction() {
               >
                 {({ opacity }) => (
                   <div style={{ opacity }}>
-                    <h1 className="introduction-header">Welcome.</h1>
+                    <h1 className="introduction-header">Welcome</h1>
                     <p>
                       <span>
-                        I'm a software engineer with a particular love of
-                        everything HTML, CSS, JavaScript.
+                        Hello! My name's Mikaela. I'm a software engineer with a
+                        particular love of everything HTML, CSS, JavaScript.
+                      </span>
+                      <span>
+                        A nature lover, I want the web to feel alive. I'd like
+                        interactions to be fun, interesting, and something that
+                        people look foreward to engaging with.
+                      </span>
+                      <span>
+                        Whether it be improving website speeds, creating
+                        components thats facilitate fast development, or
+                        ensuring that the things I make are accessible, I want
+                        to make sure that what I build contributes to the
+                        wonderful ecosystem of the web.
                       </span>
                       <span>
                         My interests include building out design and layout

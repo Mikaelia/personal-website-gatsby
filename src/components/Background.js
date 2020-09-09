@@ -9,7 +9,7 @@ export default function Background() {
       viewBox="0 0 1600 800"
       preserveAspectRatio="none"
     >
-      <rect fill="#190059" width="1600" height="800" />
+      <rect style={{ zIndex: "-2" }} fill="#190059" width="1600" height="800" />
       <g>
         <path
           fill="#4d1553"

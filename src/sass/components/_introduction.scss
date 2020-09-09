@@ -1,5 +1,6 @@
 .introduction-container {
-  top: 5rem;
+  position: absolute;
+  top: 10rem;
   color: $color-white;
   max-width: 35rem;
   background: transparent;
@@ -39,7 +40,6 @@
   font-family: "Montserrat";
   font-weight: 400;
   margin-bottom: 4rem;
-  text-transform: uppercase;
 
   @include respond(largest) {
     text-align: center;

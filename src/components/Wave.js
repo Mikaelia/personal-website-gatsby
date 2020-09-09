@@ -1,23 +1,23 @@
-import React from "react";
+import React from "react"
 
-const Wave = () => (
+const Wave = ({ style }) => (
   <div className="wave-container">
     <svg
-      className="wave"
-      width="100%"
-      height="172"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1079.86 900"
+      style={style}
       preserveAspectRatio="none"
-      viewBox="0 0 2000 172"
-      style={{ minWidth: "2000px" }}
     >
-      <path
-        fill="white"
-        d="M0 86.3149C316 86.315 444 159.155 884 51.1554C1324 -56.8446 1320.29 34.1214 1538 70.4063C1814 116.407 2156 188.408 2560 86.315V232.317L0 232.316V86.3149Z"
-      />
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="background-wave">
+          <path
+            fill="#0e0603"
+            d="M1079.86,773.85C880.23,903.11,735.25,911.36,637.36,892.27c-118.29-23-175.3-87.29-335-118.42-123.11-24-229.95-13.32-302.35,0V64.14a1137.41,1137.41,0,0,0,179.4,55.44c60.26,13.28,146.39,35.31,234.73,26.07,164.94-17.24,199.79-95.73,347.13-131.9,70.06-17.2,175.46-26.09,318.6,21.84Z"
+          />
+        </g>
+      </g>
     </svg>
   </div>
-);
+)
 
-export default Wave;
+export default Wave

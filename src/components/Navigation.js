@@ -3,14 +3,6 @@ import { Link } from "gatsby"
 const Navigation = ({ modifier }) => {
   const [checked, setChecked] = useState(false)
 
-  // componentDidMount() {
-  //   document.addEventListener("keydown", this.closeModal);
-  // }
-
-  // const closeModal = event => {
-  //   if (event.keyCode === 27) setChecked(false)
-  // }
-
   const handleCheck = () => {
     setChecked(!checked)
   }
