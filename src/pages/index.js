@@ -38,6 +38,15 @@ const LandingPage = styled.div`
     margin-top: 20vh;
   }
 
+  .introduction {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
   .tree-container {
     position: absolute;
     top: 0;
@@ -47,7 +56,7 @@ const LandingPage = styled.div`
   .night-sky {
     min-width: 2000px;
     height: 100vh;
-    margin-top: -50rem;
+    margin-top: -60rem;
     position: sticky;
     top: 0rem;
     z-index: -1;
@@ -205,8 +214,9 @@ class IndexPage extends React.Component {
                 transform: "rotateY(180deg)",
               }}
             ></Wave>
-
-            <Introduction></Introduction>
+            <div className="introduction">
+              <Introduction></Introduction>
+            </div>
           </div>
 
           <div className="night-sky">
