@@ -28,28 +28,31 @@ export default function Introduction() {
                     <p>
                       <span>
                         Hello! My name's Mikaela. I'm a software engineer with a
-                        particular love of everything HTML, CSS, JavaScript.
+                        particular soft spot for HTML, CSS, JavaScript.
                       </span>
                       <span>
-                        A nature lover, I want the web to feel alive. I'd like
-                        interactions to be fun, interesting, and something that
-                        people look foreward to engaging with.
+                        I've always loved the outdoors, so it's not a huge
+                        suprise that I'm excited to be working towards making
+                        the web feel alive, too, by building interactions that
+                        are fun, intuitive, and memorable (in a good way).
                       </span>
                       <span>
-                        Whether it be improving website speeds, creating
-                        components thats facilitate fast development, or
-                        ensuring that the things I make are accessible, I want
-                        to make sure that what I build contributes to the
-                        wonderful ecosystem of the web.
+                        As I've grown as a developer, I've worked alongside
+                        senior designers and developers who have raised my
+                        standards for creating products that are not only
+                        enjoyable to use, but are written in code that's
+                        maintainable and easy to understand.
                       </span>
                       <span>
-                        My interests include building out design and layout
-                        systems, architecting component libraries, and
-                        developing tools to make engineers' lives easier.
+                        Throughout my work, I've enjoyed removing roadblocks
+                        that burn time and cause frustration. Whether it be
+                        improving application performance, creating component
+                        libraries, working on tools that facilitate faster
+                        development, or taking a hard look at the accessibility
+                        of a product, I want to make sure that what I build
+                        helps others do what they need to do.
                       </span>
-                      <span>
-                        Clean, organized, and scaleable CSS brings me much joy.
-                      </span>
+
                       <span>
                         As an{" "}
                         <a

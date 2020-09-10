@@ -56,7 +56,7 @@ const LandingPage = styled.div`
   .night-sky {
     min-width: 2000px;
     height: 100vh;
-    margin-top: -60rem;
+    margin-top: -50rem;
     position: sticky;
     top: 0rem;
     z-index: -1;
@@ -69,7 +69,6 @@ const LandingPage = styled.div`
     margin-top: 30rem;
     height: 50rem;
     width: 2000px;
-
     position: relative;
   }
 
@@ -202,7 +201,7 @@ class IndexPage extends React.Component {
               style={{
                 width: "2000px",
                 marginTop: "-20rem",
-                height: "80rem",
+                height: "90rem",
               }}
             ></Wave>
             <Wave
@@ -210,7 +209,7 @@ class IndexPage extends React.Component {
                 minWidth: "2000px",
                 marginTop: "-20rem",
                 marginLeft: "1995px",
-                height: "80rem",
+                height: "90rem",
                 transform: "rotateY(180deg)",
               }}
             ></Wave>
