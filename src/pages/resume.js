@@ -13,7 +13,7 @@ const ResumePage = () => (
     <IframeWrapper>
       <iframe
         title="resume-pdf"
-        src="https://drive.google.com/file/d/1Eit1PE2IE7Q-5u951vCNy-w7Nhhz5wCj/preview"
+        src="https://drive.google.com/file/d/1mewqzsDjpOEru6o_QbQo8iAF6eaYbhrn/preview"
         width="100%"
         height="100%"
         style={{ marginTop: "4rem" }}
