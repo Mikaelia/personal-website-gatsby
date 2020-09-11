@@ -15,6 +15,32 @@ import styled from "styled-components"
 import Wave from "../components/Wave"
 import FooterWave from "../components/FooterWave"
 import Hiker from "../components/Hiker"
+import Moon from "../components/Moon"
+import Star from "../components/Star"
+import { keyframes } from "styled-components"
+
+const blink = keyframes`
+0% {
+  opacity: 1;
+}
+50% {
+  opacity: 0;
+ transform: scale(.5)
+}
+
+75% {
+ 
+  transform: rotate(100deg);
+
+}
+
+100% {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+
+`
 
 const LandingPage = styled.div`
   position: relative;
@@ -61,8 +87,16 @@ const LandingPage = styled.div`
     top: 0rem;
     z-index: -1;
     width: 100%;
-
     overflow: hidden;
+  }
+
+  .star {
+    animation: ${blink} 2s ease infinite;
+    z-index: 5;
+  }
+
+  .star:hover {
+    cursor: pointer;
   }
 
   .project-container {
@@ -114,10 +148,10 @@ class IndexPage extends React.Component {
               <Tree2
                 style={{
                   position: "absolute",
-                  height: "8rem",
+                  height: "9rem",
                   width: "18rem",
-                  bottom: "7.8rem",
-                  left: "4.6rem",
+                  bottom: "8.2rem",
+                  left: "4.2rem",
                 }}
               ></Tree2>
               <Tree3
@@ -156,7 +190,7 @@ class IndexPage extends React.Component {
                   height: "11rem",
                   width: "18rem",
                   bottom: "17rem",
-                  left: "76.3rem",
+                  left: "76.9rem",
                   transform: "rotate(2deg)",
                 }}
               ></Tree5>
@@ -175,7 +209,7 @@ class IndexPage extends React.Component {
                   height: "14rem",
                   width: "18rem",
                   bottom: "18.5rem",
-                  left: "85rem",
+                  left: "83.5rem",
                 }}
               ></Tree6>
               <Tree6
@@ -219,6 +253,170 @@ class IndexPage extends React.Component {
           </div>
 
           <div className="night-sky">
+            <Star
+              style={{
+                width: ".5rem",
+                height: ".5rem",
+                position: "absolute",
+                top: "35%",
+                left: "5%",
+                animationDelay: ".2s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".5rem",
+                height: ".5rem",
+                position: "absolute",
+                top: "10%",
+                left: "5%",
+                zIndex: "2",
+                animationDelay: ".8s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".3rem",
+                height: ".3rem",
+                position: "absolute",
+                top: "35%",
+                left: "6%",
+                zIndex: "2",
+                animationDelay: ".6s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".3rem",
+                height: ".3rem",
+                position: "absolute",
+                top: "15%",
+                left: "10%",
+                zIndex: "2",
+                animationDelay: "8s",
+              }}
+            ></Star>
+
+            <Star
+              style={{
+                width: ".3rem",
+                height: ".3rem",
+                position: "absolute",
+                top: "50%",
+                left: "15%",
+                zIndex: "2",
+                animationDelay: ".7s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".3rem",
+                height: ".3rem",
+                position: "absolute",
+                top: "20%",
+                left: "20%",
+                zIndex: "2",
+                animationDelay: ".7s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".5rem",
+                height: ".5rem",
+                position: "absolute",
+                top: "10%",
+                left: "25%",
+                zIndex: "2",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".5rem",
+                height: ".5rem",
+                position: "absolute",
+                top: "30%",
+                left: "20%",
+                zIndex: "2",
+                animationDelay: ".5s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".5rem",
+                height: ".5rem",
+                position: "absolute",
+                top: "30%",
+                left: "35%",
+                zIndex: "2",
+                animationDelay: ".9s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".3rem",
+                height: ".3rem",
+                position: "absolute",
+                top: "10%",
+                left: "37%",
+                zIndex: "2",
+                animationDelay: ".5s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".3rem",
+                height: ".3rem",
+                position: "absolute",
+                top: "12%",
+                left: "45%",
+                zIndex: "2",
+                animationDelay: ".5s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".3rem",
+                height: ".3rem",
+                position: "absolute",
+                top: "23%",
+                left: "55%",
+                zIndex: "2",
+                animationDelay: ".5s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".6rem",
+                height: ".6rem",
+                position: "absolute",
+                top: "23%",
+                left: "56%",
+                zIndex: "2",
+                animationDelay: ".5s",
+              }}
+            ></Star>
+            <Star
+              style={{
+                width: ".3rem",
+                height: ".3rem",
+                position: "absolute",
+                top: "20%",
+                left: "69%",
+                zIndex: "2",
+                animationDelay: ".5s",
+              }}
+            ></Star>
+            <Moon
+              style={{
+                width: "1rem",
+                height: "1rem",
+                position: "absolute",
+                top: "40%",
+                left: "40%",
+                zIndex: "2",
+                opacity: ".8",
+              }}
+            ></Moon>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -278,9 +476,8 @@ class IndexPage extends React.Component {
               style={{
                 width: "6rem",
                 position: "absolute",
-                top: "0rem",
-                left: "2rem",
-                transform: "rotate(2deg)",
+                top: "-1rem",
+                left: "2.5rem",
               }}
             ></Tree1>
             <Tree1
@@ -298,7 +495,6 @@ class IndexPage extends React.Component {
                 position: "absolute",
                 top: "-7rem",
                 left: "-1rem",
-                transform: "rotate(-2deg)",
               }}
             ></Tree1>
             <Tree1
@@ -307,6 +503,7 @@ class IndexPage extends React.Component {
                 position: "absolute",
                 top: "-5rem",
                 left: "32rem",
+                transform: "rotate(-2deg)",
               }}
             ></Tree1>
             <Tree1

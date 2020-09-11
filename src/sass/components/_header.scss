@@ -19,6 +19,7 @@ header {
   letter-spacing: 0.01rem;
   font-weight: 700;
   color: $color-white;
+  font-family: "Montserrat";
 }
 
 .navlinks {
@@ -39,19 +40,8 @@ header {
 
     color: $color-white;
     opacity: 1;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 01rem;
+    font-family: "Montserrat";
   }
-
-  // &:nth-child(1) a {
-  //   color: hsl(5, 38%, 42%);
-  // }
-
-  // &:nth-child(2) a {
-  //   color: hsl(334, 43%, 31%);
-  // }
-
-  // &:nth-child(3) a {
-  //   color: $color-black;
-  // }
 }
