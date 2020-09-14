@@ -13,7 +13,7 @@ import styled from "styled-components"
 
 const StyledWrapper = styled.div`
   @media (min-width: 2000px) {
-    background: #0e0603;
+    // background: #0e0603;
   }
 `
 

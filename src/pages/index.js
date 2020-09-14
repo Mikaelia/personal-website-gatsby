@@ -127,125 +127,190 @@ const IndexPage = () => {
 
         <div className="information-slide">
           <div className="tree-container">
-            <VisibilitySensor partialVisibility once>
+            <VisibilitySensor partialVisibility offset={{ top: -10 }}>
               {({ isVisible }) => (
-                <Tree1
-                  visible={isVisible}
-                  style={{
-                    position: "absolute",
-                    height: "6rem",
-                    width: "18rem",
-                    left: "-3rem",
-                  }}
-                  animation={{
-                    from: "0rem",
-                    to: "11rem",
-                    delay: "0.5",
-                    changer: "bottom",
-                  }}
-                ></Tree1>
+                <>
+                  <Tree1
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "6rem",
+                      width: "18rem",
+                      left: "-3rem",
+                    }}
+                    animation={{
+                      from: "0rem",
+                      to: "11rem",
+                      delay: "0.5",
+                      changer: "bottom",
+                    }}
+                  ></Tree1>
+
+                  <Tree1
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "14rem",
+                      width: "18rem",
+
+                      left: "18px",
+                      transform: "rotate(2deg)",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-8rem",
+                      to: "8rem",
+                    }}
+                  ></Tree1>
+
+                  <Tree1
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "9rem",
+                      width: "18rem",
+                      left: "4.2rem",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-8rem",
+                      to: "8.2rem",
+                      delay: ".2",
+                    }}
+                  ></Tree1>
+
+                  <Tree3
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "13.5rem",
+                      width: "19rem",
+                      left: "11.3rem",
+                      transform: "rotate(-2deg)",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-6rem",
+                      to: "6rem",
+                      delay: ".2",
+                    }}
+                  ></Tree3>
+                  <Tree3
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "11rem",
+                      width: "18rem",
+
+                      left: "18rem",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-4.6rem",
+                      to: "4.6rem",
+                      delay: ".4",
+                    }}
+                  ></Tree3>
+
+                  <Tree3
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "7rem",
+                      width: "18rem",
+
+                      left: "72rem",
+                      transform: "rotate(-4deg)",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-9rem",
+                      to: "17rem",
+                      delay: ".1",
+                    }}
+                  ></Tree3>
+
+                  <Tree3
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "11rem",
+                      width: "18rem",
+                      left: "76.9rem",
+                      transform: "rotate(-4deg)",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-9rem",
+                      to: "17rem",
+                      delay: ".3",
+                    }}
+                  ></Tree3>
+
+                  <Tree1
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "15rem",
+                      width: "18rem",
+                      left: "80rem",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-6rem",
+                      to: "19rem",
+                      delay: ".5",
+                    }}
+                  ></Tree1>
+
+                  <Tree1
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "14rem",
+                      width: "18rem",
+                      left: "83.5rem",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-6rem",
+                      to: "18.5rem",
+                      delay: ".1",
+                    }}
+                  ></Tree1>
+                  <Tree1
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "9rem",
+                      width: "18rem",
+                      left: "89rem",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-2rem",
+                      to: "18.5rem",
+                      delay: ".7",
+                    }}
+                  ></Tree1>
+                  <Tree1
+                    isVisible={isVisible}
+                    style={{
+                      position: "absolute",
+                      height: "10rem",
+                      width: "18rem",
+                      left: "92rem",
+                    }}
+                    animation={{
+                      changer: "bottom",
+                      from: "-2rem",
+                      to: "17rem",
+                      delay: ".8",
+                    }}
+                  ></Tree1>
+                </>
               )}
             </VisibilitySensor>
-            <Tree1
-              style={{
-                position: "absolute",
-                height: "14rem",
-                width: "18rem",
-
-                left: "18px",
-                transform: "rotate(2deg)",
-              }}
-              animation={{
-                changer: "bottom",
-                from: "-8rem",
-                to: "8rem",
-              }}
-            ></Tree1>
-            <Tree2
-              style={{
-                position: "absolute",
-                height: "9rem",
-                width: "18rem",
-                bottom: "8.2rem",
-                left: "4.2rem",
-              }}
-            ></Tree2>
-            <Tree3
-              style={{
-                position: "absolute",
-                height: "13.5rem",
-                width: "19rem",
-                bottom: "6rem",
-                left: "11.3rem",
-                transform: "rotate(-2deg)",
-              }}
-            ></Tree3>
-            <Tree4
-              style={{
-                position: "absolute",
-                height: "11rem",
-                width: "18rem",
-                bottom: "4.6rem",
-                left: "18rem",
-                transform: "rotate(2deg)",
-              }}
-            ></Tree4>
-
-            <Tree5
-              style={{
-                position: "absolute",
-                height: "7rem",
-                width: "18rem",
-                bottom: "17rem",
-                left: "72rem",
-              }}
-            ></Tree5>
-            <Tree5
-              style={{
-                position: "absolute",
-                height: "11rem",
-                width: "18rem",
-                bottom: "17rem",
-                left: "76.9rem",
-                transform: "rotate(2deg)",
-              }}
-            ></Tree5>
-            <Tree6
-              style={{
-                position: "absolute",
-                height: "15rem",
-                width: "18rem",
-                bottom: "19rem",
-                left: "80rem",
-              }}
-            ></Tree6>
-            <Tree6
-              style={{
-                position: "absolute",
-                height: "14rem",
-                width: "18rem",
-                bottom: "18.5rem",
-                left: "83.5rem",
-              }}
-            ></Tree6>
-            <Tree6
-              style={{
-                position: "absolute",
-                height: "9rem",
-                width: "18rem",
-                bottom: "19rem",
-                left: "89rem",
-              }}
-            ></Tree6>
-            <Tree6
-              style={{
-                position: "absolute",
-                height: "10rem",
-                width: "18rem",
-                bottom: "17rem",
-                left: "93rem",
-              }}
-            ></Tree6>
           </div>
           <Wave
             style={{
@@ -480,57 +545,105 @@ const IndexPage = () => {
         </div>
 
         <div className="project-container">
-          <Tree1
-            style={{
-              width: "6rem",
-              position: "absolute",
-              top: "-1rem",
-              left: "2.5rem",
-            }}
-          ></Tree1>
-          <Tree1
-            style={{
-              width: "6rem",
-              position: "absolute",
-              top: "-3rem",
-              left: "5rem",
-              transform: "rotate(2deg)",
-            }}
-          ></Tree1>
-          <Tree1
-            style={{
-              width: "7rem",
-              position: "absolute",
-              top: "-7rem",
-              left: "-1rem",
-            }}
-          ></Tree1>
-          <Tree1
-            style={{
-              width: "6rem",
-              position: "absolute",
-              top: "-5rem",
-              left: "32rem",
-              transform: "rotate(-2deg)",
-            }}
-          ></Tree1>
-          <Tree1
-            style={{
-              width: "7rem",
-              position: "absolute",
-              top: "-9rem",
-              left: "36rem",
-            }}
-          ></Tree1>
-          <Tree1
-            style={{
-              width: "5rem",
-              position: "absolute",
-              top: "-6rem",
-              left: "42rem",
-              transform: "rotate(-2deg)",
-            }}
-          ></Tree1>
+          <VisibilitySensor partialVisibility offset={{ top: -10 }}>
+            {({ isVisible }) => (
+              <>
+                <Tree1
+                  style={{
+                    width: "6rem",
+                    position: "absolute",
+                    top: "7rem",
+                    left: "2.5rem",
+                  }}
+                  isVisible={isVisible}
+                  animation={{
+                    changer: "top",
+                    from: "7rem",
+                    to: "-1rem",
+                    delay: ".3",
+                  }}
+                ></Tree1>
+                <Tree1
+                  style={{
+                    width: "6rem",
+                    position: "absolute",
+                    left: "5rem",
+                    top: "7rem",
+                    transform: "rotate(2deg)",
+                  }}
+                  isVisible={isVisible}
+                  animation={{
+                    changer: "top",
+                    from: "7rem",
+                    to: "-3rem",
+                    delay: ".1",
+                  }}
+                ></Tree1>
+                <Tree1
+                  style={{
+                    width: "7rem",
+                    top: "7rem",
+                    position: "absolute",
+                    left: "-1rem",
+                  }}
+                  isVisible={isVisible}
+                  animation={{
+                    changer: "top",
+                    from: "7rem",
+                    to: "-7rem",
+                    delay: "",
+                  }}
+                ></Tree1>
+                <Tree1
+                  style={{
+                    width: "6rem",
+                    position: "absolute",
+                    left: "32rem",
+                    top: "5rem",
+                    transform: "rotate(-2deg)",
+                  }}
+                  isVisible={isVisible}
+                  animation={{
+                    changer: "top",
+                    from: "5rem",
+                    to: "-5rem",
+                    delay: ".2",
+                  }}
+                ></Tree1>
+                <Tree1
+                  style={{
+                    width: "7rem",
+                    position: "absolute",
+                    top: "5rem",
+                    left: "36rem",
+                  }}
+                  isVisible={isVisible}
+                  animation={{
+                    changer: "top",
+                    from: "5rem",
+                    to: "-9rem",
+                    delay: ".1",
+                  }}
+                ></Tree1>
+                <Tree1
+                  style={{
+                    width: "5rem",
+                    position: "absolute",
+                    left: "42rem",
+                    top: "5rem",
+                    transform: "rotate(-2deg)",
+                  }}
+                  isVisible={isVisible}
+                  animation={{
+                    changer: "top",
+                    from: "5rem",
+                    to: "-6rem",
+                    delay: ".6",
+                  }}
+                ></Tree1>
+              </>
+            )}
+          </VisibilitySensor>
           <Hiker
             style={{
               width: "3rem",

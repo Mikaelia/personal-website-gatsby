@@ -1,22 +1,29 @@
 import React, { useRef, useEffect } from "react"
 import gsap from "gsap"
 
-const Tree1 = ({ style, animation }) => {
+const Tree1 = ({ style, animation, isVisible }) => {
   const tree = useRef(null)
+  const [hasAnimated, setHasAnimated] = React.useState(false)
 
   useEffect(() => {
-    animation &&
-      gsap.fromTo(
-        tree.current,
-        1,
-        { [animation.changer]: animation.from },
-        {
-          [animation.changer]: animation.to,
-          ease: "elastic.out(.3, .3)",
-          delay: animation.delay,
-        }
-      )
-  }, [])
+    if (!hasAnimated && isVisible === true) {
+      animate()
+      setHasAnimated(true)
+    }
+  }, [isVisible])
+
+  const animate = () => {
+    gsap.fromTo(
+      tree.current,
+      1,
+      { [animation.changer]: animation.from },
+      {
+        [animation.changer]: animation.to,
+        ease: "elastic.out(.3, .3)",
+        delay: animation.delay,
+      }
+    )
+  }
 
   return (
     <svg

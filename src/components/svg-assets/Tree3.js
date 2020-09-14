@@ -1,8 +1,33 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
+import gsap from "gsap"
 
-export default function Tree({ style }) {
+export default function Tree3({ style, animation, isVisible }) {
+  const tree = useRef(null)
+  const [hasAnimated, setHasAnimated] = React.useState(false)
+
+  useEffect(() => {
+    if (!hasAnimated && isVisible === true) {
+      animate()
+      setHasAnimated(true)
+    }
+  }, [isVisible])
+
+  const animate = () => {
+    gsap.fromTo(
+      tree.current,
+      1,
+      { [animation.changer]: animation.from },
+      {
+        [animation.changer]: animation.to,
+        ease: "elastic.out(.3, .3)",
+        delay: animation.delay,
+      }
+    )
+  }
+
   return (
     <svg
+      ref={tree}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 90.88 154.81"
       style={style}
