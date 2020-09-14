@@ -8,17 +8,16 @@ import {
 } from "../components/socialMediaIcons"
 import { Spring } from "react-spring/renderprops"
 import VisibilitySensor from "react-visibility-sensor"
-import Header from "./header.js"
 
 export default function Introduction() {
   return (
     <>
       <article className="introduction-container" id="introduction-content">
-        <VisibilitySensor once>
+        <VisibilitySensor partialVisibility once>
           {({ isVisible }) => (
             <>
               <Spring
-                delay={0}
+                delay={500}
                 to={{ opacity: isVisible ? 1 : 0 }}
                 config={{ duration: 1000 }}
               >
@@ -28,13 +27,13 @@ export default function Introduction() {
                     <p>
                       <span>
                         Hello! My name's Mikaela. I'm a software engineer with a
-                        particular soft spot for HTML, CSS, JavaScript.
+                        particular love for HTML, CSS, JavaScript.
                       </span>
                       <span>
-                        I've always loved the outdoors, so it's not a huge
-                        suprise that I'm excited to be working towards making
-                        the web feel alive, too, by building interactions that
-                        are fun, intuitive, and memorable (in a good way).
+                        I've always loved the outdoors, so it's not a suprise
+                        that I'm excited to be working towards making the web
+                        feel alive, too, by building interactions that are fun,
+                        intuitive, and have a personality of their own.
                       </span>
                       <span>
                         As I've grown as a developer, I've worked alongside
@@ -43,16 +42,6 @@ export default function Introduction() {
                         enjoyable to use, but are written in code that's
                         maintainable and easy to understand.
                       </span>
-                      <span>
-                        Throughout my work, I've enjoyed removing roadblocks
-                        that burn time and cause frustration. Whether it be
-                        improving application performance, creating component
-                        libraries, working on tools that facilitate faster
-                        development, or taking a hard look at the accessibility
-                        of a product, I want to make sure that what I build
-                        helps others do what they need to do.
-                      </span>
-
                       <span>
                         As an{" "}
                         <a

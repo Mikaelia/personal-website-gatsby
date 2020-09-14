@@ -1,6 +1,6 @@
 .introduction-container {
   position: absolute;
-  top: 10rem;
+
   color: $color-white;
   max-width: 35rem;
   background: transparent;
@@ -19,21 +19,23 @@
 
   & h1 {
     margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
   }
 
   @include respond(smallest) {
+    top: 10rem;
     max-width: 35rem;
     letter-spacing: 0.05rem;
     text-transform: none;
     line-height: 1.6;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 100;
   }
 
-  @include respond(largest) {
-    max-width: 40rem;
-    left: calc(50% - 20rem);
-  }
+  // @include respond(largest) {
+  //   max-width: 40rem;
+  //   left: calc(50% - 20rem);
+  // }
 }
 
 .introduction-header {
@@ -41,9 +43,9 @@
   font-weight: 400;
   margin-bottom: 4rem;
 
-  @include respond(largest) {
-    text-align: center;
-  }
+  // @include respond(largest) {
+  //   text-align: center;
+  // }
 }
 
 .art-link,

@@ -8,7 +8,7 @@ const IframeWrapper = styled.div`
 `
 
 const ResumePage = () => (
-  <Layout>
+  <Layout background="#0e0603">
     <SEO title="Resume" />
     <IframeWrapper>
       <iframe

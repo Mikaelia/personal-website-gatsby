@@ -8,16 +8,31 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Header from "./header.js"
-import "./layout.css"
 import "../sass/main.scss"
-const Layout = ({ children }) => {
+import styled from "styled-components"
+
+const StyledWrapper = styled.div`
+  @media (min-width: 2000px) {
+    background: #0e0603;
+  }
+`
+
+let StyledMain = styled.main`
+ height: "100vh",
+          overflowX: "hidden",
+          maxWidth: "2000px",
+  @media (min-width: 2000px) {
+    transform: translate3d(0, 0, 0);
+    margin: 0 auto;
+  }
+`
+
+const Layout = ({ children, background }) => {
   return (
-    <>
-      <div>
-        <Header />
-        <main style={{ height: "100vh" }}>{children}</main>
-      </div>
-    </>
+    <StyledWrapper>
+      <Header background={background} />
+      <StyledMain>{children}</StyledMain>
+    </StyledWrapper>
   )
 }
 

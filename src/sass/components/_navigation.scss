@@ -73,9 +73,9 @@
       background-size: 224%;
       transition: all 0.4s;
 
-      @include respond(smallest) {
-        font-size: 3rem;
-      }
+      // @include respond(smallest) {
+      //   font-size: 3rem;
+      // }
 
       @include respond(largest) {
         font-size: 48px;
