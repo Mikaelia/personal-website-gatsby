@@ -17,9 +17,10 @@ export default function Introduction() {
           {({ isVisible }) => (
             <>
               <Spring
-                delay={500}
-                to={{ opacity: isVisible ? 1 : 0 }}
-                config={{ duration: 1000 }}
+                delay={2000}
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+                config={{ duration: 2000 }}
               >
                 {({ opacity }) => (
                   <div style={{ opacity }}>
@@ -60,7 +61,7 @@ export default function Introduction() {
 
               <div className="icons">
                 <Spring
-                  delay={1000}
+                  delay={2000}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >
@@ -78,7 +79,7 @@ export default function Introduction() {
                   )}
                 </Spring>
                 <Spring
-                  delay={1200}
+                  delay={2200}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >
@@ -100,7 +101,7 @@ export default function Introduction() {
                   )}
                 </Spring>
                 <Spring
-                  delay={1400}
+                  delay={2400}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >
@@ -122,7 +123,7 @@ export default function Introduction() {
                   )}
                 </Spring>
                 <Spring
-                  delay={1600}
+                  delay={2600}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >
@@ -144,7 +145,7 @@ export default function Introduction() {
                   )}
                 </Spring>
                 <Spring
-                  delay={1800}
+                  delay={2800}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >

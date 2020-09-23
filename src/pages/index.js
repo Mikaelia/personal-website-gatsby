@@ -4,11 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Background from "../components/Background"
 import Tree1 from "../components/svg-assets/Tree1"
-import Tree2 from "../components/svg-assets/Tree2"
 import Tree3 from "../components/svg-assets/Tree3"
-import Tree4 from "../components/svg-assets/Tree4"
-import Tree5 from "../components/svg-assets/Tree5"
-import Tree6 from "../components/svg-assets/Tree6"
 import Introduction from "../components/Introduction"
 import Birds from "../components/Birds"
 import styled from "styled-components"
@@ -19,7 +15,6 @@ import Moon from "../components/Moon"
 import Star from "../components/Star"
 import { keyframes } from "styled-components"
 import VisibilitySensor from "react-visibility-sensor"
-import { Spring } from "react-spring/renderprops"
 
 const blink = keyframes`
 0% {
@@ -46,8 +41,15 @@ const blink = keyframes`
 
 const LandingPage = styled.div`
   position: relative;
+
+  @media (min-width: 2000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .sky-slide {
-    min-width: 1500px;
+    min-width: 2000px;
     height: 100vh;
     overflow: hidden;
     position: sticky;
@@ -73,6 +75,10 @@ const LandingPage = styled.div`
     width: 100vw;
     display: flex;
     justify-content: center;
+
+    @media (min-width: 2000px) {
+      width: 100%;
+    }
   }
 
   .tree-container {
@@ -88,7 +94,7 @@ const LandingPage = styled.div`
     position: sticky;
     top: 0rem;
     z-index: -1;
-    width: 100%;
+
     overflow: hidden;
   }
 
@@ -109,9 +115,9 @@ const LandingPage = styled.div`
   }
 
   .project-info {
-    height: 36%;
+    height: 38%;
     background: rgb(14, 6, 3);
-    margin-top: -10rem;
+    margin-top: -11rem;
   }
 `
 

@@ -1,7 +1,7 @@
 .introduction-container {
   position: absolute;
 
-  color: $color-white;
+  color: $color-offwhite;
   max-width: 35rem;
   background: transparent;
 
@@ -32,6 +32,10 @@
     font-weight: 100;
   }
 
+  @media (min-width: 2000px) {
+    align-self: center;
+  }
+
   // @include respond(largest) {
   //   max-width: 40rem;
   //   left: calc(50% - 20rem);
@@ -43,9 +47,9 @@
   font-weight: 400;
   margin-bottom: 4rem;
 
-  // @include respond(largest) {
-  //   text-align: center;
-  // }
+  @include respond(largest) {
+    text-align: center;
+  }
 }
 
 .art-link,

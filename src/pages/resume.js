@@ -16,7 +16,7 @@ const ResumePage = () => (
         src="https://drive.google.com/file/d/1Eit1PE2IE7Q-5u951vCNy-w7Nhhz5wCj/preview"
         width="100%"
         height="100%"
-        style={{ marginTop: "4rem" }}
+        style={{ marginTop: "2.5rem", height: "calc(100% + 1.5rem)" }}
       ></iframe>
     </IframeWrapper>
   </Layout>

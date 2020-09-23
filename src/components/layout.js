@@ -12,9 +12,10 @@ import "../sass/main.scss"
 import styled from "styled-components"
 
 const StyledWrapper = styled.div`
-  @media (min-width: 2000px) {
-    // background: #0e0603;
-  }
+  // @media (min-width: 2000px) {
+  //   background: #0e0603;
+  //   z-index: -1;
+  // }
 `
 
 let StyledMain = styled.main`
