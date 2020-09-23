@@ -10,11 +10,13 @@ import Birds from "../components/Birds"
 import styled from "styled-components"
 import Wave from "../components/Wave"
 import FooterWave from "../components/FooterWave"
+import Footer from "../components/Footer"
 import Hiker from "../components/Hiker"
 import Moon from "../components/Moon"
 import Star from "../components/Star"
 import { keyframes } from "styled-components"
 import VisibilitySensor from "react-visibility-sensor"
+import Description from "../components/Description"
 
 const blink = keyframes`
 0% {
@@ -112,12 +114,6 @@ const LandingPage = styled.div`
     height: 50rem;
     width: 2000px;
     position: relative;
-  }
-
-  .project-info {
-    height: 38%;
-    background: rgb(14, 6, 3);
-    margin-top: -11rem;
   }
 `
 
@@ -670,7 +666,11 @@ const IndexPage = () => {
               height: "100%",
             }}
           ></FooterWave>
-          <div className="project-info"></div>
+          <VisibilitySensor partialVisibility>
+            {({ isVisible }) => (
+              <Description isVisible={isVisible}></Description>
+            )}
+          </VisibilitySensor>
         </div>
       </LandingPage>
     </Layout>

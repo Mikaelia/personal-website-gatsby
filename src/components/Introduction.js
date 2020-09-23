@@ -22,8 +22,6 @@ export default function Introduction({ isVisible }) {
   }, [isVisible])
 
   const animate = () => {
-    console.log("animate")
-
     gsap.fromTo(
       intro.current,
       3,
