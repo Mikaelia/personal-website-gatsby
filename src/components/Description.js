@@ -75,8 +75,6 @@ export default function Description({ isVisible }) {
       },
       {
         opacity: 1,
-
-        delay: 1,
       }
     )
   }

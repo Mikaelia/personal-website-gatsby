@@ -60,11 +60,11 @@ export default function Introduction({ isVisible }) {
                     have a personality of their own.
                   </span>
                   <span>
-                    As I've grown as a developer, I've worked alongside senior
-                    designers and developers who have raised my standards for
-                    creating products that are not only enjoyable to use, but
-                    are written in code that's maintainable and easy to
-                    understand.
+                    As I've grown as an engineer I've enjoyed working closely
+                    designers and developers to bring products to life: building
+                    out design and layout systems, architecting component
+                    libraries, and developing tools to make engineers' lives
+                    easier.
                   </span>
                   <span>
                     As an{" "}
