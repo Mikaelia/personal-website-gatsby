@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import {
   TwitterIcon,
   LinkedInIcon,
@@ -8,56 +8,79 @@ import {
 } from "../components/socialMediaIcons"
 import { Spring } from "react-spring/renderprops"
 import VisibilitySensor from "react-visibility-sensor"
+import gsap from "gsap"
 
-export default function Introduction() {
+export default function Introduction({ isVisible }) {
+  const intro = useRef(null)
+  const [hasAnimated, setHasAnimated] = React.useState(false)
+
+  useEffect(() => {
+    if (!hasAnimated && isVisible === true) {
+      animate()
+      setHasAnimated(true)
+    }
+  }, [isVisible])
+
+  const animate = () => {
+    console.log("animate")
+
+    gsap.fromTo(
+      intro.current,
+      3,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+
+        delay: 1,
+      }
+    )
+  }
+
   return (
     <>
-      <article className="introduction-container" id="introduction-content">
-        <VisibilitySensor partialVisibility once>
+      <article
+        ref={intro}
+        className="introduction-container"
+        id="introduction-content"
+      >
+        <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <>
-              <Spring
-                delay={2000}
-                from={{ opacity: 0 }}
-                to={{ opacity: 1 }}
-                config={{ duration: 2000 }}
-              >
-                {({ opacity }) => (
-                  <div style={{ opacity }}>
-                    <h1 className="introduction-header">Welcome</h1>
-                    <p>
-                      <span>
-                        Hello! My name's Mikaela. I'm a software engineer with a
-                        particular love for HTML, CSS, JavaScript.
-                      </span>
-                      <span>
-                        I've always loved the outdoors, so it's not a suprise
-                        that I'm excited to be working towards making the web
-                        feel alive, too, by building interactions that are fun,
-                        intuitive, and have a personality of their own.
-                      </span>
-                      <span>
-                        As I've grown as a developer, I've worked alongside
-                        senior designers and developers who have raised my
-                        standards for creating products that are not only
-                        enjoyable to use, but are written in code that's
-                        maintainable and easy to understand.
-                      </span>
-                      <span>
-                        As an{" "}
-                        <a
-                          className="art-link"
-                          href="https://www.facebook.com/mikaelaspencils/"
-                        >
-                          artist
-                        </a>
-                        , I'm addicted to detail. My mission is to create
-                        virtual experiences that'll brighten your day.
-                      </span>
-                    </p>
-                  </div>
-                )}
-              </Spring>
+              <div>
+                <h1 className="introduction-header">Welcome</h1>
+                <p>
+                  <span>
+                    Hello! My name's Mikaela. I'm a software engineer with a
+                    particular love for HTML, CSS, JavaScript.
+                  </span>
+                  <span>
+                    I've always loved the outdoors, so it's not a suprise that
+                    I'm excited to be working towards making the web feel alive,
+                    too, by building interactions that are fun, intuitive, and
+                    have a personality of their own.
+                  </span>
+                  <span>
+                    As I've grown as a developer, I've worked alongside senior
+                    designers and developers who have raised my standards for
+                    creating products that are not only enjoyable to use, but
+                    are written in code that's maintainable and easy to
+                    understand.
+                  </span>
+                  <span>
+                    As an{" "}
+                    <a
+                      className="art-link"
+                      href="https://www.facebook.com/mikaelaspencils/"
+                    >
+                      artist
+                    </a>
+                    , I'm addicted to detail. My mission is to create virtual
+                    experiences that'll brighten your day.
+                  </span>
+                </p>
+              </div>
 
               <div className="icons">
                 <Spring

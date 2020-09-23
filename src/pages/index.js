@@ -327,7 +327,11 @@ const IndexPage = () => {
           ></Wave>
 
           <div className="introduction">
-            <Introduction></Introduction>
+            <VisibilitySensor partialVisibility offset={{ top: -10 }}>
+              {({ isVisible }) => (
+                <Introduction isVisible={isVisible}></Introduction>
+              )}
+            </VisibilitySensor>
           </div>
         </div>
 
