@@ -21,7 +21,7 @@ const Information = styled.div`
 
   .description article {
     position: absolute;
-
+    width: 100%;
     color: #f0ddc0;
     max-width: 35rem;
     top: 50%;
