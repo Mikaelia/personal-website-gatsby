@@ -1,42 +1,65 @@
 @import "../modules/_variables.scss";
 
-.header {
-  grid-row: 1 / 2;
-  grid-column: 1 / -1;
-  position: fixed;
-  height: 4rem;
-  width: 100vw;
-
-  background-color: rgba(49, 13, 53, 0.1);
-  font-size: 1.5rem;
-  transition: background 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header {
+  background: #0e0603;
+  position: relative;
   z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  a {
-    text-decoration: none;
-    color: black;
+  @include respond(smallest) {
+    position: absolute;
+    display: flex;
+
+    justify-content: flex-start;
+    padding: 0.3rem 0;
   }
+}
 
-  &--scrolled {
-    padding: 15px 0;
-    height: 4rem;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(20px);
-    color: $color-secondary-light;
-
-    & a {
-      color: $color-secondary-light;
-    }
+@media (min-width: 2000px) {
+  header {
+    background: #0e0603;
   }
 }
 
 .header__logo {
+  font-size: 1.2rem;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #e7af3c;
+  font-family: "Montserrat";
+
+  @include respond(smallest) {
+    margin-left: 2rem;
+  }
+}
+
+.navlinks {
+  display: none;
+  list-style: none;
   margin: 0;
   margin-left: 2rem;
-  padding: 0.5rem 0;
-  font-weight: 300;
+
+  @include respond(smallest) {
+    display: flex;
+    justify-self: flex-end;
+  }
+}
+
+.navlinks-item {
+  margin: 0;
+  margin-right: 2rem;
+
+  & a {
+    text-decoration: none;
+    color: #e7af3c;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.15rem;
+    font-family: "Montserrat";
+  }
 }

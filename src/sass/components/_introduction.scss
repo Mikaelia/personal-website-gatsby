@@ -1,15 +1,17 @@
 .introduction-container {
-  top: 5rem;
-  color: $color-white;
-  max-width: 35rem;
-  background: transparent;
+  position: absolute;
 
+  color: $color-offwhite;
+  max-width: 35rem;
+  background: $color-black;
+  top: 4rem;
   padding: 0 2rem;
   letter-spacing: 0.05rem;
   text-transform: none;
   line-height: 1.6;
   font-size: 0.9rem;
   font-weight: 100;
+  opacity: 0;
 
   & span {
     display: inline-block;
@@ -18,29 +20,34 @@
 
   & h1 {
     margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
   }
 
   @include respond(smallest) {
+    top: 10rem;
     max-width: 35rem;
     letter-spacing: 0.05rem;
     text-transform: none;
     line-height: 1.6;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 100;
   }
 
-  @include respond(largest) {
-    max-width: 40rem;
-    left: calc(50% - 20rem);
+  @media (min-width: 2000px) {
+    align-self: center;
   }
+
+  // @include respond(largest) {
+  //   max-width: 40rem;
+  //   left: calc(50% - 20rem);
+  // }
 }
 
 .introduction-header {
   font-family: "Montserrat";
   font-weight: 400;
   margin-bottom: 4rem;
-  text-transform: uppercase;
-
+  color: #ddb744;
   @include respond(largest) {
     text-align: center;
   }

@@ -1,6 +1,6 @@
 //// COLORS ////
 
-$color-primary: rgb(77, 21, 83);
+$color-primary: hsl(294, 60%, 20%);
 $color-primary-light: rgb(11, 4, 19);
 $color-primary-dark: rgb(179, 98, 52);
 
@@ -19,11 +19,9 @@ $color-grey-dark-3: #333;
 
 $color-white: rgb(248, 235, 219);
 $color-offwhite: rgb(240, 221, 192);
-$color-black: rgb(8, 8, 8);
+$color-black: hsl(20s, 80%, 3%);
 
-$color-grey-dark-2: #6D5D4B;
-
-
+$color-grey-dark-2: #6d5d4b;
 
 // Box Shadow
 $box-shadow: 2px 3px 15px rgba(32, 68, 122, 0.37);

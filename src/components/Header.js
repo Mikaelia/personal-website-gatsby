@@ -1,44 +1,25 @@
 import React, { Component } from "react"
-import Navigation from "./Navigation"
 import { Link } from "gatsby"
 
-class Header extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      hasScrolled: false,
-    }
-  }
-
-  // componentDidMount() {
-  //   window.addEventListener("scroll", this.handleScroll)
-  // }
-
-  // handleScroll = event => {
-  //   console.log("s")
-  //   const scrollTop = window.pageYOffset
-  //   if (scrollTop > 50) {
-  //     this.setState({ hasScrolled: true })
-  //   } else {
-  //     this.setState({ hasScrolled: false })
-  //   }
-  // }
-
-  render() {
-    return (
-      <header
-        className={
-          this.state.hasScrolled ? "header header--scrolled" : "header"
-        }
-      >
-        <Link to="/">
-          <span className="header__logo">Mikaela Gurney</span>
-        </Link>
-        <Navigation
-          modifier={this.state.hasScrolled ? " navigation__icon--scrolled" : ""}
-        />
-      </header>
-    )
-  }
+const Header = ({ background }) => {
+  return (
+    <header style={background && { background: background }}>
+      <Link to="/">
+        <span className="header__logo">Mikaela Gurney</span>
+      </Link>
+      <ul className="navlinks">
+        <li className="navlinks-item">
+          <a href="https://github.com/Mikaelia">Github</a>
+        </li>
+        <li className="navlinks-item">
+          <Link to="/resume">Resume</Link>
+        </li>
+        <li className="navlinks-item">
+          <a href="https://www.pixelsips.dev/">Blog</a>
+        </li>
+      </ul>
+    </header>
+  )
 }
+
 export default Header

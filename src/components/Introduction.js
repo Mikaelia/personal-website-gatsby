@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import {
   TwitterIcon,
   LinkedInIcon,
@@ -8,54 +8,81 @@ import {
 } from "../components/socialMediaIcons"
 import { Spring } from "react-spring/renderprops"
 import VisibilitySensor from "react-visibility-sensor"
+import gsap from "gsap"
 
-export default function Introduction() {
+export default function Introduction({ isVisible }) {
+  const intro = useRef(null)
+  const [hasAnimated, setHasAnimated] = React.useState(false)
+
+  useEffect(() => {
+    if (!hasAnimated && isVisible === true) {
+      animate()
+      setHasAnimated(true)
+    }
+  }, [isVisible])
+
+  const animate = () => {
+    gsap.fromTo(
+      intro.current,
+      3,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+
+        delay: 1,
+      }
+    )
+  }
+
   return (
     <>
-      <article className="introduction-container" id="introduction-content">
-        <VisibilitySensor once>
+      <article
+        ref={intro}
+        className="introduction-container"
+        id="introduction-content"
+      >
+        <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <>
-              <Spring
-                delay={0}
-                to={{ opacity: isVisible ? 1 : 0 }}
-                config={{ duration: 1000 }}
-              >
-                {({ opacity }) => (
-                  <div style={{ opacity }}>
-                    <h1 className="introduction-header">Welcome.</h1>
-                    <p>
-                      <span>
-                        I'm a software engineer with a particular love of
-                        everything HTML, CSS, JavaScript.
-                      </span>
-                      <span>
-                        My interests include building out design and layout
-                        systems, architecting component libraries, and
-                        developing tools to make engineers' lives easier.
-                      </span>
-                      <span>
-                        Clean, organized, and scaleable CSS brings me much joy.
-                      </span>
-                      <span>
-                        As an{" "}
-                        <a
-                          className="art-link"
-                          href="https://www.facebook.com/mikaelaspencils/"
-                        >
-                          artist
-                        </a>
-                        , I'm addicted to detail. My mission is to create
-                        virtual experiences that'll brighten your day.
-                      </span>
-                    </p>
-                  </div>
-                )}
-              </Spring>
+              <div>
+                <h1 className="introduction-header">Welcome</h1>
+                <p>
+                  <span>
+                    Hello! My name's Mikaela. I'm a software engineer with a
+                    particular love for HTML, CSS, JavaScript.
+                  </span>
+                  <span>
+                    I've always loved the outdoors, so it's not a suprise that
+                    I'm excited to be working towards making the web feel alive,
+                    too, by building interactions that are fun, intuitive, and
+                    have a personality of their own.
+                  </span>
+                  <span>
+                    As I've grown as an engineer I've enjoyed working closely
+                    designers and developers to bring products to life: building
+                    out design and layout systems, architecting component
+                    libraries, and developing tools to make engineers' lives
+                    easier.
+                  </span>
+                  <span>
+                    As an{" "}
+                    <a
+                      className="art-link"
+                      href="https://www.facebook.com/mikaelaspencils/"
+                    >
+                      artist
+                    </a>
+                    , I'm addicted to detail. My mission is to create virtual
+                    experiences that'll brighten your day.
+                  </span>
+                </p>
+              </div>
 
               <div className="icons">
                 <Spring
-                  delay={1000}
+                  delay={2000}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >
@@ -73,7 +100,7 @@ export default function Introduction() {
                   )}
                 </Spring>
                 <Spring
-                  delay={1200}
+                  delay={2200}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >
@@ -95,7 +122,7 @@ export default function Introduction() {
                   )}
                 </Spring>
                 <Spring
-                  delay={1400}
+                  delay={2400}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >
@@ -117,7 +144,7 @@ export default function Introduction() {
                   )}
                 </Spring>
                 <Spring
-                  delay={1600}
+                  delay={2600}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >
@@ -139,7 +166,7 @@ export default function Introduction() {
                   )}
                 </Spring>
                 <Spring
-                  delay={1800}
+                  delay={2800}
                   to={{ opacity: isVisible ? 1 : 0 }}
                   config={{ duration: 1000 }}
                 >
