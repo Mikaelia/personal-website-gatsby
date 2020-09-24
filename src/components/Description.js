@@ -14,6 +14,7 @@ const Information = styled.div`
     left: 0;
     top: 70%;
     background: orange;
+    margin-bottom: 0.5rem;
     @media (min-width: 2000px) {
       width: 100%;
     }
@@ -46,12 +47,13 @@ const Information = styled.div`
     }
   }
 
-  .description {
-    margin-bottom: 0.5rem;
-  }
-
   .description a {
     color: #f0ddc0;
+    transition: color 0.2s ease;
+
+    :hover {
+      color: #ddb744;
+    }
   }
 `
 export default function Description({ isVisible }) {
@@ -60,7 +62,6 @@ export default function Description({ isVisible }) {
 
   useEffect(() => {
     if (!hasAnimated && isVisible === true) {
-      console.log("pin")
       animate()
       setHasAnimated(true)
     }
