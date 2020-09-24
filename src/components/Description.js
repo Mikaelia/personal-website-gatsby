@@ -85,7 +85,7 @@ export default function Description({ isVisible }) {
         <article>
           <h1>A little more...</h1>
           <p>
-            Please feel feel free to check out more of my work &#8594;{" "}
+            Check out more of my work &#8594;{" "}
             <a
               href="https://github.com/Mikaelia"
               rel="noopener noreferrer"
