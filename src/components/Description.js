@@ -14,7 +14,7 @@ const Information = styled.div`
     left: 0;
     top: 70%;
     background: orange;
-    margin-bottom: 0.5rem;
+
     @media (min-width: 2000px) {
       width: 100%;
     }
@@ -45,6 +45,10 @@ const Information = styled.div`
     @media only screen and (min-width: 69.25em) {
       text-align: center;
     }
+  }
+
+  .description p {
+    margin-bottom: 0.5rem;
   }
 
   .description a {
