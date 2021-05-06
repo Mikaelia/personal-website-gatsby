@@ -1,4 +1,7 @@
 import React, { useRef } from "react"
+import { keyframes } from "styled-components"
+import VisibilitySensor from "react-visibility-sensor"
+import Description from "../components/Description"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,13 +13,9 @@ import Birds from "../components/Birds"
 import styled from "styled-components"
 import Wave from "../components/Wave"
 import FooterWave from "../components/FooterWave"
-import Footer from "../components/Footer"
 import Hiker from "../components/Hiker"
 import Moon from "../components/Moon"
 import Star from "../components/Star"
-import { keyframes } from "styled-components"
-import VisibilitySensor from "react-visibility-sensor"
-import Description from "../components/Description"
 
 const blink = keyframes`
 0% {
@@ -48,6 +47,23 @@ const LandingPage = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+
+  .cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: var(--color-text);
   }
 
   .sky-slide {
@@ -118,9 +134,34 @@ const LandingPage = styled.div`
 `
 
 const IndexPage = () => {
+  const cursor = useRef(null)
+  // set the starting position of the cursor outside of the screen
+  // set the starting position of the cursor outside of the screen
+  let clientX = -100
+  let clientY = -100
+
+  const initCursor = () => {
+    // add listener to track the current mouse position
+    document.addEventListener("mousemove", e => {
+      clientX = e.clientX
+      clientY = e.clientY
+    })
+
+    // transform the cursor to the current mouse position
+    // use requestAnimationFrame() for smooth performance
+    const render = () => {
+      cursor.current.style.transform = `translate(${clientX}px, ${clientY}px)`
+
+      requestAnimationFrame(render)
+    }
+    requestAnimationFrame(render)
+  }
+
+  initCursor()
   return (
     <Layout>
       <SEO title="Home" />
+      <div className="cursor cursor--small" ref={cursor}></div>
       <LandingPage>
         <div className="sky-slide">
           <Background></Background>
