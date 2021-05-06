@@ -134,34 +134,34 @@ const LandingPage = styled.div`
 `
 
 const IndexPage = () => {
-  const cursor = useRef(null)
-  // set the starting position of the cursor outside of the screen
-  // set the starting position of the cursor outside of the screen
-  let clientX = -100
-  let clientY = -100
+  // const cursor = useRef(null)
+  // // set the starting position of the cursor outside of the screen
+  // // set the starting position of the cursor outside of the screen
+  // let clientX = -100
+  // let clientY = -100
 
-  const initCursor = () => {
-    // add listener to track the current mouse position
-    document.addEventListener("mousemove", e => {
-      clientX = e.clientX
-      clientY = e.clientY
-    })
+  // const initCursor = () => {
+  //   // add listener to track the current mouse position
+  //   document.addEventListener("mousemove", e => {
+  //     clientX = e.clientX
+  //     clientY = e.clientY
+  //   })
 
-    // transform the cursor to the current mouse position
-    // use requestAnimationFrame() for smooth performance
-    const render = () => {
-      cursor.current.style.transform = `translate(${clientX}px, ${clientY}px)`
+  //   // transform the cursor to the current mouse position
+  //   // use requestAnimationFrame() for smooth performance
+  //   const render = () => {
+  //     cursor.current.style.transform = `translate(${clientX}px, ${clientY}px)`
 
-      requestAnimationFrame(render)
-    }
-    requestAnimationFrame(render)
-  }
+  //     requestAnimationFrame(render)
+  //   }
+  //   requestAnimationFrame(render)
+  // }
 
-  initCursor()
+  // initCursor()
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="cursor cursor--small" ref={cursor}></div>
+      {/* <div className="cursor cursor--small" ref={cursor}></div> */}
       <LandingPage>
         <div className="sky-slide">
           <Background></Background>
