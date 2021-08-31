@@ -68,6 +68,7 @@ const LandingPage = styled.div`
 
   .sky-slide {
     min-width: 2000px;
+    max-width: 2000px;
     height: 100vh;
     overflow: hidden;
     position: sticky;
@@ -107,6 +108,7 @@ const LandingPage = styled.div`
 
   .night-sky {
     min-width: 2000px;
+    max-width: 2000px;
     height: 100vh;
     margin-top: -50rem;
     position: sticky;
