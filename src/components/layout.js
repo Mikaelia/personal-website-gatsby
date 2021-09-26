@@ -13,10 +13,11 @@ import "../sass/main.scss"
 import styled from "styled-components"
 
 const StyledWrapper = styled.div`
-  // @media (min-width: 2000px) {
-  //   background: #0e0603;
-  //   z-index: -1;
-  // }
+  @media (min-width: 2000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 let StyledMain = styled.main`
