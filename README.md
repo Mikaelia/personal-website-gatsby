@@ -1,1 +1,1 @@
-Personal Websity ported to Gatsby
+Personal Website ported to Gatsby
